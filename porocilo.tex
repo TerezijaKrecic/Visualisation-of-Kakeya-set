@@ -99,7 +99,7 @@ Sedaj ga razdelimo na pol, kot kaže slika~\ref{trikotnik_razdelitev}, ter vsake
 
 \textbf{Ideja je, da se teh $ 2n $ trikotnikov tako medsebojno prekrije, da skupaj tvorijo lik z poljubno majhno ploščino, ko se $ n $ oz. število malih trikotnikov povečuje v neskončnost.}
 
-Takoj opazimo, da se s translacijo trikotnikov ``uniči'' prehod enotske daljice iz enega trikotnika na drugega. Na sliki~\ref{preskok1} so narisane možne translacije sosednjih dveh trikotnikov. Skupne stranice so obarvane modro, enotska daljica pa z rdečo. Na levi ni spremembe in trikotnika se držita za skupno stranico, torej daljica zvezno preide iz levega trikotnika na desnega. V sredini imata trikotnika prazen presek in mora daljica na nek način iz modre stranice levega trikotnika preskočiti na modro stranico desnega ter nadaljevati svoje vrtenje. Na desni pa imamo primer prekrivanja, kjer se ravno tako pojavi vprašanje, kako daljica preskoči iz ene modre stranice na drugo.
+Takoj opazimo, da se s translacijo trikotnikov prekine zvezen prehod enotske daljice iz enega trikotnika na drugega. Na sliki~\ref{preskok1} so narisane možne translacije sosednjih dveh trikotnikov. Skupne stranice so obarvane modro, enotska daljica pa z rdečo. Na levi ni spremembe in trikotnika se držita za skupno stranico, torej daljica zvezno preide iz levega trikotnika na desnega. V sredini imata trikotnika prazen presek in mora daljica na nek način iz modre stranice levega trikotnika preskočiti na modro stranico desnega ter nadaljevati svoje vrtenje. Na desni pa imamo primer prekrivanja, kjer se ravno tako pojavi vprašanje, kako daljica preskoči iz ene modre stranice na drugo.
 
 \begin{figure}[h!]
     \centering
@@ -110,11 +110,14 @@ Takoj opazimo, da se s translacijo trikotnikov ``uniči'' prehod enotske daljice
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Preskakovanje daljice med sosednjimi trikotniki}
+\section*{Preskakovanje daljice med sosednjima trikotnikoma}
 
-Pál je za preskakovanje daljice med dvema sosednjima trikotnika, ki se ne stikata več na skupni stranici (sredinski in desni primer na sliki~\ref{preskok1}), podal nadvse enostavno rešitev.
+Pál je za preskakovanje daljice med dvema sosednjima trikotnika, ki se ne stikata več na skupni stranici (sredinski in desni primer na sliki~\ref{preskok1}), podal nadvse enostavno rešitev (gl. sliko~\ref{pal}):
 
-Ko se enotska daljica obrne in leži na modri stranici, narišemo nosilki obeh modrih stranic. Nosilki sta seveda vzporedni. Nato zarišemo daljico, ki ju povezuje (gl. sliko~\ref{pal}). Daljico nato pošljemo po prvi nosilki do začetka povezovalne daljice, kjer jo zavrtimo okoli zgornjega krajišča, da pristane na povezovalni daljici, nato jo premaknemo po tej daljici do krajišča drugega trikotnika, jo zavrtimo v nasprotno smer in potisnemo po drugi nosilki v drugi trikotnik. Smer enotske daljice se je na ta način ohranila, daljica pa je med tem preskokom (potovanje po nosilkah ter vrtenje v krajiščih povezovalne daljice) opisala poljubno majhno ploščino, saj je kot vrtenja z daljšanjem povezovalne daljice proti neskončnosti lahko poljubno majhen ter s tem tudi orisan krožni izsek, premice pa nimajo ploščine.
+\begin{enumerate}
+    \item \textbf{Konstrukcija Pálovega spoja} (označen z zeleno): Nad prekrivajočima sosednjima trikotnikoma narišemo nosilki obeh modrih stranic, ki sta seveda vzporedni. Nato zarišemo daljico, ki ju povezuje, kot je narisano na sliki.
+    \item \textbf{Gibanje po črki ``N''}: Ko se enotska daljica obrne v vrhu prvega trikotnika in pristane na modri stranici, jo pošljemo po prvi nosilki do začetka povezovalne daljice, kjer jo zavrtimo okoli zgornjega krajišča, da pristane na povezovalni daljici, nato jo premaknemo po tej daljici do vrha drugega trikotnika, jo zavrtimo v nasprotno smer in potisnemo po drugi nosilki v drugi trikotnik.
+\end{enumerate}
 
 \begin{figure}[h!]
     \centering
@@ -123,11 +126,15 @@ Ko se enotska daljica obrne in leži na modri stranici, narišemo nosilki obeh m
     \label{pal}
 \end{figure}
 
-Torej za vsak preskok enotske daljice med trikotnikoma potrebujemo (in znamo konstruirati) dodatno ploščino, vendar poljubno majhno.
+Smer enotske daljice se na ta način ohrani, daljica pa med tem preskokom (gibanjem po zelenem liku) opiše poljubno majhno ploščino, saj je kot vrtenja z daljšanjem povezovalne daljice proti neskončnosti lahko poljubno majhen ter s tem tudi orisan krožni izsek, premice pa nimajo ploščine.
+
+Torej za vsak preskok enotske daljice med trikotnikoma potrebujemo (in znamo konstruirati) dodatno ploščino, vendar je le-ta lahko poljubno majhna.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section*{Perronova drevesa}
 
+S Pálovimi spoji smo rešili težavo vzporednih translacij enotske daljice, pri čemer se je skupna ploščina lika povečala le za poljubno majhno vrednost. Ostane nam še odkritje načina prekritja trikotnikov, da bo ploščina celotnega območja prekritja prav tako poljubno majhna, ko gre število trikotnikov proti neskončnosti.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
