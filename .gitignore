@@ -4,6 +4,11 @@
 *.out
 *.fdb_latexmk
 *.synctex.gz
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
 
 
 # Byte-compiled / optimized / DLL files
