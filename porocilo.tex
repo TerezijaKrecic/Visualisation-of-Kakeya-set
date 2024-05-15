@@ -50,7 +50,7 @@
 
 V tej projektni nalogi je bil cilj vizualizirati Kakeya-množico s pomočjo programa \href{https://ipe.otfried.org/}{Ipe}. Najprej sem morala sploh predelati problem, ki ga je zastavil Kakeya več kot 100 let nazaj, poleg tega pa se še spoznati z novo programsko opremo.
 
-V poročilu bom na kratko predstavila glavno vprašanje in eno strategijo, kako ga rešiti. Vse slike, ki so vključene zraven, sem ustvarila sama s pomočjo Geogebre in omenjenega orodja Ipe. Poročilo je povzeto po Besicovitchevem članku~\cite{Besicovitch}.
+V poročilu bom na kratko predstavila glavno vprašanje in eno strategijo, kako ga rešiti. Vse slike, ki so vključene zraven, sem ustvarila sama s pomočjo Geogebre in omenjenega orodja Ipe. Poročilo je izhaja iz Besicovitchevega članka~\cite{Besicovitch}, vendar sem nekaj delov poenostavila in predelala.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -60,7 +60,7 @@ Japonski matematik Sōichi Kakeya je leta 1917 zastavil naslednje vprašanje, ki
 
 \vspace{0.2cm}
 \begin{center}
-    \textbf{Kolikšna je lahko najmanjša ploščina območja, znotraj katerega se daljica dolžine 1 zvezno obrne za 180 °?}
+    \textbf{Kolikšna je lahko najmanjša ploščina območja, znotraj katerega se daljica dolžine 1 zvezno obrne za 180°?}
 \end{center}
 \vspace{0.2cm}
 
@@ -85,19 +85,45 @@ Nekaj časa je veljalo, da je tretji primer, tj. deltoida, odgovor na vprašanje
 
 \section*{Ideja za konstrukcijo}
 
-Vzemimo enakokraki pravokotni trikotnik s katetama dolžine 2. Če v središče hipotenuze postavimo en konec enotske daljice, lahko njen drugi konec opiše kot 180 °, ne da bi kakršenkoli del daljice zapustil trikotnik.
+Vzemimo enakokraki pravokotni trikotnik s katetama dolžine 2. Če v središče hipotenuze postavimo en konec enotske daljice, lahko njen drugi konec opiše kot 180°, ne da bi kakršenkoli del daljice zapustil trikotnik.
+
+Ta trikotnik sicer ustreza pogoju iz vprašanja, vendar je njegova ploščina enaka 2 in večja od vseh treh zgornjih primerov.
+Sedaj ga razdelimo na pol, kot kaže slika~\ref{trikotnik_razdelitev}, ter vsakega izmed delov (ki sta še vedno enakokraka pravokotna trikotnika) še dodatno razdelimo na $ n $ manjših trikotnikov z osnovnico dolžine $ \frac{2}{n} $ in višino 1. Enotska daljica se tako obrne za 180°, ko se v enem krajišču zasuče čez vrh vsakega izmed malih trikotnikov in prehaja med njimi preko skupnih stranic.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.3\textwidth]{ipe_slike/trikotnik.pdf}
-    % \caption{Primeri, ki ustrezajo pogoju.}
-    \label{trikotnik}
+    \includegraphics[width=\textwidth]{ipe_slike/trikotnik_razdelitev.pdf}
+    \caption{Generiranje $ 2n $ trikotnikov z višino 1.}
+    \label{trikotnik_razdelitev}
 \end{figure}
 
+\textbf{Ideja je, da se teh $ 2n $ trikotnikov tako medsebojno prekrije, da skupaj tvorijo lik z poljubno majhno ploščino, ko se $ n $ oz. število malih trikotnikov povečuje v neskončnost.}
 
+Takoj opazimo, da se s translacijo trikotnikov ``uniči'' prehod enotske daljice iz enega trikotnika na drugega. Na sliki~\ref{preskok1} so narisane možne translacije sosednjih dveh trikotnikov. Skupne stranice so obarvane modro, enotska daljica pa z rdečo. Na levi ni spremembe in trikotnika se držita za skupno stranico, torej daljica zvezno preide iz levega trikotnika na desnega. V sredini imata trikotnika prazen presek in mora daljica na nek način iz modre stranice levega trikotnika preskočiti na modro stranico desnega ter nadaljevati svoje vrtenje. Na desni pa imamo primer prekrivanja, kjer se ravno tako pojavi vprašanje, kako daljica preskoči iz ene modre stranice na drugo.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{ipe_slike/preskok1.pdf}
+    \caption{Možne translacije sosednjih dveh trikotnikov in vrtenje daljice skozi njiju}
+    \label{preskok1}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section*{Preskakovanje daljice med sosednjimi trikotniki}
+
+Pál je za preskakovanje daljice med dvema sosednjima trikotnika, ki se ne stikata več na skupni stranici (sredinski in desni primer na sliki~\ref{preskok1}), podal nadvse enostavno rešitev.
+
+Ko se enotska daljica obrne in leži na modri stranici, narišemo nosilki obeh modrih stranic. Nosilki sta seveda vzporedni. Nato zarišemo daljico, ki ju povezuje (gl. sliko~\ref{pal}). Daljico nato pošljemo po prvi nosilki do začetka povezovalne daljice, kjer jo zavrtimo okoli zgornjega krajišča, da pristane na povezovalni daljici, nato jo premaknemo po tej daljici do krajišča drugega trikotnika, jo zavrtimo v nasprotno smer in potisnemo po drugi nosilki v drugi trikotnik. Smer enotske daljice se je na ta način ohranila, daljica pa je med tem preskokom (potovanje po nosilkah ter vrtenje v krajiščih povezovalne daljice) opisala poljubno majhno ploščino, saj je kot vrtenja z daljšanjem povezovalne daljice proti neskončnosti lahko poljubno majhen ter s tem tudi orisan krožni izsek, premice pa nimajo ploščine.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ipe_slike/pal.pdf}
+    \caption{Preskok daljice med dvema prekrivajočima se sosednjima trikotnika preko lika s poljubno majhno ploščino po Pálovi zamisli}
+    \label{pal}
+\end{figure}
+
+Torej za vsak preskok enotske daljice med trikotnikoma potrebujemo (in znamo konstruirati) dodatno ploščino, vendar poljubno majhno.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
