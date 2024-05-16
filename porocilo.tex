@@ -62,7 +62,7 @@ V poročilu bo najprej predstavljeno zastavljeno vprašanje, ki ga rešujemo, na
 
 \section*{Kakeyev problem igle}
 
-Japonski matematik Sōichi Kakeya je leta 1917 zastavil naslednje vprašanje, ki se ga je v kasnejšem času prijelo ime ``\emph{the Kakeya needle problem}\footnote{Kakeyev problem igle, op. prev.}'':
+Japonski matematik Sōichi Kakeya je leta 1917 zastavil naslednje vprašanje, ki se ga je v kasnejšem času prijelo ime ``\emph{Kakeyev problem igle}''\footnote{orig. \emph{the Kakeya needle problem}, op. prev.}:
 
 \vspace{0.2cm}
 \begin{center}
@@ -80,7 +80,7 @@ Japonski matematik Sōichi Kakeya je leta 1917 zastavil naslednje vprašanje, ki
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{geogebra_slike/prevelike_ploscine.png}
+    \includegraphics[width=0.8\textwidth]{geogebra_slike/prevelike_ploscine.png}
     \caption{Primeri, ki ustrezajo pogoju.}
     \label{primeri}
 \end{figure}
@@ -91,25 +91,25 @@ Nekaj časa so verjeli, da je deltoida odgovor na vprašanje Kakeye, vendar je r
 
 \section*{Ideja za konstrukcijo}
 
-Vzemimo enakokraki pravokotni trikotnik s katetama dolžine 2. Če v središče hipotenuze postavimo en konec enotske daljice, lahko njen drugi konec opiše kot 180°, ne da bi kakršenkoli del daljice zapustil trikotnik. Ta trikotnik sicer ustreza pogoju iz vprašanja, vendar je njegova ploščina enaka 2 in večja od vseh treh zgornjih primerov.
+Vzemimo enakokraki pravokotni trikotnik s katetama dolžine 2. Če v središče hipotenuze postavimo en konec enotske daljice, njen drugi konec opiše kot 180°, pri čemer daljica ves čas ostane znotraj lika. Trikotnik sicer ustreza pogoju iz vprašanja, vendar je njegova ploščina enaka 2 in večja od vseh treh zgornjih primerov.
 
-Sedaj ga razdelimo na pol, kot kaže slika~\ref{trikotnik_razdelitev}, ter vsakega izmed delov (ki sta še vedno enakokraka pravokotna trikotnika) še dodatno razdelimo na $ n $ manjših trikotnikov z osnovnico dolžine $ \frac{2}{n} $ in višino 1. Enotska daljica se tako obrne za 180°, ko se v enem krajišču zasuče čez vrh vsakega izmed malih trikotnikov in prehaja med njimi preko skupnih stranic.
+Sedaj ga razdelimo na pol, kot kaže slika~\ref{trikotnik_razdelitev}, ter vsakega izmed delov (ki sta še vedno enakokraka pravokotna trikotnika, imenujmo ju ``\emph{osnovna trikotnika}'') še dodatno razdelimo na $ n $ manjših trikotnikov (imenujmo jih ``\emph{podtrikotniki}'') z osnovnico dolžine $ \frac{2}{n} $ in višino 1. Enotska daljica se tako obrne za 180°, ko se v enem krajišču zasuče čez vrh vsakega izmed podtrikotnikov in prehaja med njimi preko skupnih stranic.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{ipe_slike/trikotnik_razdelitev.pdf}
-    \caption{Generiranje $ 2n $ trikotnikov z višino 1.}
+    \caption{Generiranje $ 2n $ podtrikotnikov z višino 1.}
     \label{trikotnik_razdelitev}
 \end{figure}
 
 \textbf{Ideja je, da teh $ 2n $ trikotnikov tako vzporedno premaknemo, da skupno prekritje tvori lik s poljubno majhno ploščino, ko $ n \to \infty $.}
 
-Takoj opazimo, da se s translacijo trikotnikov prekine zvezen prehod enotske daljice iz enega trikotnika na drugega. Na sliki~\ref{preskok1} so narisane možne translacije sosednjih dveh trikotnikov. Skupne stranice so obarvane modro, enotska daljica pa z rdečo. Na levi ni spremembe in trikotnika se držita za skupno stranico, torej daljica zvezno preide iz levega trikotnika na desnega. V sredi imata trikotnika prazen presek, na desni pa se trikotnika prekrivata in pojavi se vprašanje, kako naj daljica iz modre stranice levega trikotnika preskoči na modro stranico desnega, kjer bi potem nadaljevala svoje vrtenje.
+Takoj opazimo, da se s translacijo podtrikotnikov prekine zvezen prehod enotske daljice iz enega podtrikotnika na drugega. Na sliki~\ref{preskok1} so narisane možne translacije sosednjih dveh podtrikotnikov. Skupne stranice so obarvane modro, enotska daljica pa z rdečo. Na levi ni spremembe in podtrikotnika se držita za skupno stranico, torej daljica zvezno preide iz levega podtrikotnika na desnega. V sredi imata podtrikotnika prazen presek, na desni pa se podtrikotnika prekrivata in pojavi se vprašanje, kako naj daljica iz modre stranice levega podtrikotnika preskoči na modro stranico desnega, kjer bi potem nadaljevala svoje vrtenje.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{ipe_slike/preskok1.pdf}
-    \caption{Možne translacije sosednjih dveh trikotnikov in vrtenje daljice skozi njiju}
+    \caption{Možne translacije sosednjih podtrikotnikov in vrtenje daljice skozi njiju}
     \label{preskok1}
 \end{figure}
 
@@ -117,11 +117,11 @@ Takoj opazimo, da se s translacijo trikotnikov prekine zvezen prehod enotske dal
 
 \section*{Preskakovanje daljice med sosednjima trikotnikoma}
 
-Pál je za preskakovanje daljice med dvema sosednjima trikotnika, ki se ne stikata več na skupni stranici (sredinski in desni primer na sliki~\ref{preskok1}), podal nadvse enostavno rešitev v naslednjih dveh korakih (gl. sliko~\ref{pal}):
+Pál je za preskakovanje daljice med dvema sosednjima podtrikotnikoma, ki se ne stikata več na skupni stranici (sredinski in desni primer na sliki~\ref{preskok1}), podal nadvse enostavno rešitev v naslednjih dveh korakih (gl. sliko~\ref{pal}):
 
 \begin{enumerate}
-    \item \textbf{Konstrukcija Pálovega spoja} (označen z zeleno): Nad prekrivajočima sosednjima trikotnikoma narišemo nosilki obeh modrih stranic, ki sta seveda vzporedni. Nato zarišemo daljico, ki ju povezuje, kot je narisano na sliki.
-    \item \textbf{Gibanje po črki ``N''}: Ko se enotska daljica obrne v vrhu prvega trikotnika in pristane na modri stranici, jo pošljemo po prvi nosilki do začetka povezovalne daljice, kjer jo zavrtimo okoli zgornjega krajišča, da pristane na povezovalni daljici, nato jo premaknemo po tej daljici do vrha drugega trikotnika, jo zavrtimo v nasprotno smer, da pristane na drugi nosili, po kateri jo nato potisnemo v drugi trikotnik.
+    \item \textbf{Konstrukcija Pálovega spoja} (označen z zeleno): Nad prekrivajočima sosednjima podtrikotnikoma narišemo nosilki obeh modrih stranic, ki sta seveda vzporedni. Nato zarišemo daljico, ki ju povezuje, kot je narisano na sliki.
+    \item \textbf{Gibanje po črki ``N''}: Ko se enotska daljica obrne v vrhu prvega podtrikotnika in pristane na modri stranici, jo pošljemo po prvi nosilki do začetka povezovalne daljice, kjer jo zavrtimo okoli zgornjega krajišča, da pristane na povezovalni daljici, nato jo premaknemo po tej daljici do vrha drugega podtrikotnika, jo zavrtimo v nasprotno smer, da pristane na drugi nosilki, po kateri jo nato potisnemo v drugi podtrikotnik.
 \end{enumerate}
 
 \begin{figure}[h!]
@@ -131,9 +131,9 @@ Pál je za preskakovanje daljice med dvema sosednjima trikotnika, ki se ne stika
     \label{pal}
 \end{figure}
 
-Smer enotske daljice se na ta način pri preskoku v sosednji trikotnik ohrani, daljica pa med tem prehodom (gibanjem po zelenem liku) opiše poljubno majhno ploščino, saj je kot vrtenja, če za zgornje krajišče povezovalne daljice izberemo poljubno oddaljeno točko na prvi nosilki, lahko poljubno majhen ter s tem tudi ploščina orisanega krožnega izseka, daljice pa k skupni ploščini tako ali tako ne prispevajo ničesar.
+Smer enotske daljice se na ta način pri preskoku v sosednji podtrikotnik ohrani, daljica pa med tem prehodom (gibanjem po zelenem liku) opiše poljubno majhno ploščino, saj je kot vrtenja, če za zgornje krajišče povezovalne daljice izberemo poljubno oddaljeno točko na prvi nosilki, lahko poljubno majhen ter s tem tudi ploščina orisanega krožnega izseka, daljice pa k skupni ploščini tako ali tako ne prispevajo ničesar.
 
-Torej za vsak preskok enotske daljice med sosednjima trikotnikoma \emph{potrebujemo} (in znamo konstruirati) \emph{dodatno ploščino}, vendar je le-ta lahko \emph{poljubno majhna}.
+\textbf{Torej za vsak preskok enotske daljice med sosednjima podtrikotnikoma \emph{potrebujemo} (in znamo konstruirati) \emph{dodatno ploščino}, vendar je le-ta lahko \emph{poljubno majhna}.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -141,8 +141,40 @@ Torej za vsak preskok enotske daljice med sosednjima trikotnikoma \emph{potrebuj
 
 S Pálovimi spoji smo rešili težavo vzporednih translacij enotske daljice, pri čemer se je skupna ploščina lika povečala le za poljubno majhno vrednost.
 
-Ostane nam še odkritje načina prekritja trikotnikov, da bo ploščina celotnega območja prekritja poljubno majhna, ko gre število trikotnikov proti neskončnosti. Tako bo skupaj s Pálovimi spoji ploščina območja, v katerem se enotska daljica obrne za 180°, poljubno majhna in s tem vprašanje Kakeye odgovorjeno.
+Ostane nam še vprašanje, kako medsebojno prekriti podtrikotnike, da bo ploščina celotnega območja prekritja poljubno majhna, ko gre število podtrikotnikov proti neskončnosti. Tako bo skupaj s Pálovimi spoji ploščina območja, v katerem se enotska daljica obrne za 180°, poljubno majhna in s tem vprašanje Kakeye odgovorjeno.
 
+\begin{wrapfigure}{r}{0.23\textwidth}
+    \includegraphics[width=0.9\linewidth]{ipe_slike/polovica_trikotnika.pdf}
+\end{wrapfigure}
+
+Perron je odkril zanimiv, a preprost in učinkovit način prekrivanja podtrikotnikov.
+
+Spomnimo se, kako smo iz pravokotnega enakokratkega trikotnika dobili $ 2n $ manjših trikotnikov (slika~\ref{trikotnik_razdelitev}). Vzemimo spodnji osnovni trikotnik, ki je na desni označen z neprekinjeno črto, in na njem poglejmo konstrukcijo. Za drugi osnovni trikotnik, ki je pravokoten na prvega, bo postopek enak, le vse je obrnjeno za pravi kot v levo.
+
+\begin{wrapfigure}{l}{0.45\textwidth}
+    \includegraphics[width=0.9\linewidth]{ipe_slike/k_5.pdf}
+    \caption{Sistem za $ k = 5 $}
+    \label{sistem5}
+\end{wrapfigure}
+
+Pri konstrukciji bomo povečevali število podtrikotnikov, na katere je razdeljen osnovni trikotnik. Najprej izberemo poljuben $ k \in \mathbb{N} $ in zarišemo koordinatni sistem, kot ga kaže slika~\ref{sistem5}. V vertikalni smeri smo dolžino 1 razdelili na $ k $ skladnih delov in dobili $ k $ ``nivojev''. Na sredo spodnje horizontalne črte položimo osnovni trikotnik z višino $ \frac{2}{k} $. Z naslednjim postopkom bomo zgenerirali osnovni trikotnik z višino 1, ki je razdeljen na medsebojno že premaknjenih $ 2^{k-2} $ podtrikotnikov.
+
+Najprej definirajmo \emph{vrh trikotnika} -- to je trikotnik, ki ima zgornje oglišče skupno osnovnemu trikotniku in višino $ \frac{1}{k} $ (na sliki ~\ref{sistem5} pobarvano modro).
+
+Izvedemo $ k - 2 $ enakih korakov (slika~\ref{koraki}):
+
+\begin{enumerate}
+    \item nehorizontalne stranice vsakega vrha podaljšamo za en nivo navzgor
+    \item zgornje krajišče podaljšane daljice povežemo z najbližjim presečiščem originalnega trikotnika in horizontalne črte pri nižjem nivoju (torej se spustimo za dva nivoja navzdol). Tako originalen trikotnik dobi dve ``ušesi''
+    \item postopek ponovimo za vsak nov vrh, dokler ne pridemo do nivoja 1.
+\end{enumerate}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ipe_slike/koraki.pdf}
+    \caption{Postopek generiranja osnovnega trikotnika in podtrikotnikov}
+    \label{koraki}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -150,11 +182,11 @@ Ostane nam še odkritje načina prekritja trikotnikov, da bo ploščina celotneg
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \section*{Zaključek}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 % \nocite{*}      % navede tudi vire, ki jih ne citiras
 \printbibliography[heading=bibintoc, title={Literatura}]
 
