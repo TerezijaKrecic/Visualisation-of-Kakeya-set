@@ -48,9 +48,15 @@
 
 \section*{Uvod}
 
-V tej projektni nalogi je bil cilj vizualizirati Kakeya-množico s pomočjo programa \href{https://ipe.otfried.org/}{Ipe}. Najprej sem morala sploh predelati problem, ki ga je zastavil Kakeya več kot 100 let nazaj, poleg tega pa se še spoznati z novo programsko opremo.
+V tej projektni nalogi je bil cilj vizualizirati Kakeya-množico s pomočjo programa \href{https://ipe.otfried.org/}{Ipe}. Najprej sem morala sploh predelati problem, ki ga je zastavil Kakeya več kot sto let nazaj, poleg tega pa se še spoznati z novo programsko opremo.
 
-V poročilu bom na kratko predstavila glavno vprašanje in eno strategijo, kako ga rešiti. Vse slike, ki so vključene zraven, sem ustvarila sama s pomočjo Geogebre in omenjenega orodja Ipe. Poročilo je izhaja iz Besicovitchevega članka~\cite{Besicovitch}, vendar sem nekaj delov poenostavila in predelala.
+V poročilu bom na kratko predstavila glavno vprašanje in eno strategijo, kako ga rešiti. Vse slike, ki so vključene zraven, sem ustvarila sama s pomočjo Geogebre in omenjenega orodja Ipe. 
+
+Poročilo je izhaja iz Besicovitchevega članka~\cite{Besicovitch}, vendar sem nekaj delov poenostavila in predelala, saj sem se poskusila čimbolj izogniti upeljevanju novih oznak. Tako npr. pri poljubno majhni ploščini Pálovega spoja nisem strogo matematično zapisala, kakšen poljubno majhen kot moramo vzeti, in iz kota izpeljala formulo za ploščino spoja, temveč sem idejo zapisala le z besedami.
+
+V poročilu bo najprej predstavljeno zastavljeno vprašanje, ki ga rešujemo, nato pa še en način generiranja take množice, ki ustreza pogoju iz vprašanja in nanj tudi odgovori.
+
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -79,15 +85,14 @@ Japonski matematik Sōichi Kakeya je leta 1917 zastavil naslednje vprašanje, ki
     \label{primeri}
 \end{figure}
 
-Nekaj časa je veljalo, da je tretji primer, tj. deltoida, odgovor na vprašanje Kakeye, vendar je ruski matematik Abram Besicovitch uspel dokazati, da \textbf{spodnja meja za iskano ploščino \emph{ne} obstaja}. K enostavnejši konstrukciji primera takega lika je pripomogel tudi nemški matematik Oskar Perron, svoj del pa prispeval še madžarsko-danski matematik Gyula Pál.
+Nekaj časa so verjeli, da je deltoida odgovor na vprašanje Kakeye, vendar je ruski matematik Abram Besicovitch uspel dokazati, da \textbf{spodnja meja za iskano ploščino \emph{ne} obstaja}. K enostavni konstrukciji primera takega lika je pripomogel nemški matematik Oskar Perron, svoj del pa je prispeval tudi madžarsko-danski matematik Gyula Pál.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Ideja za konstrukcijo}
 
-Vzemimo enakokraki pravokotni trikotnik s katetama dolžine 2. Če v središče hipotenuze postavimo en konec enotske daljice, lahko njen drugi konec opiše kot 180°, ne da bi kakršenkoli del daljice zapustil trikotnik.
+Vzemimo enakokraki pravokotni trikotnik s katetama dolžine 2. Če v središče hipotenuze postavimo en konec enotske daljice, lahko njen drugi konec opiše kot 180°, ne da bi kakršenkoli del daljice zapustil trikotnik. Ta trikotnik sicer ustreza pogoju iz vprašanja, vendar je njegova ploščina enaka 2 in večja od vseh treh zgornjih primerov.
 
-Ta trikotnik sicer ustreza pogoju iz vprašanja, vendar je njegova ploščina enaka 2 in večja od vseh treh zgornjih primerov.
 Sedaj ga razdelimo na pol, kot kaže slika~\ref{trikotnik_razdelitev}, ter vsakega izmed delov (ki sta še vedno enakokraka pravokotna trikotnika) še dodatno razdelimo na $ n $ manjših trikotnikov z osnovnico dolžine $ \frac{2}{n} $ in višino 1. Enotska daljica se tako obrne za 180°, ko se v enem krajišču zasuče čez vrh vsakega izmed malih trikotnikov in prehaja med njimi preko skupnih stranic.
 
 \begin{figure}[h!]
@@ -97,9 +102,9 @@ Sedaj ga razdelimo na pol, kot kaže slika~\ref{trikotnik_razdelitev}, ter vsake
     \label{trikotnik_razdelitev}
 \end{figure}
 
-\textbf{Ideja je, da se teh $ 2n $ trikotnikov tako medsebojno prekrije, da skupaj tvorijo lik z poljubno majhno ploščino, ko se $ n $ oz. število malih trikotnikov povečuje v neskončnost.}
+\textbf{Ideja je, da teh $ 2n $ trikotnikov tako vzporedno premaknemo, da skupno prekritje tvori lik s poljubno majhno ploščino, ko $ n \to \infty $.}
 
-Takoj opazimo, da se s translacijo trikotnikov prekine zvezen prehod enotske daljice iz enega trikotnika na drugega. Na sliki~\ref{preskok1} so narisane možne translacije sosednjih dveh trikotnikov. Skupne stranice so obarvane modro, enotska daljica pa z rdečo. Na levi ni spremembe in trikotnika se držita za skupno stranico, torej daljica zvezno preide iz levega trikotnika na desnega. V sredini imata trikotnika prazen presek in mora daljica na nek način iz modre stranice levega trikotnika preskočiti na modro stranico desnega ter nadaljevati svoje vrtenje. Na desni pa imamo primer prekrivanja, kjer se ravno tako pojavi vprašanje, kako daljica preskoči iz ene modre stranice na drugo.
+Takoj opazimo, da se s translacijo trikotnikov prekine zvezen prehod enotske daljice iz enega trikotnika na drugega. Na sliki~\ref{preskok1} so narisane možne translacije sosednjih dveh trikotnikov. Skupne stranice so obarvane modro, enotska daljica pa z rdečo. Na levi ni spremembe in trikotnika se držita za skupno stranico, torej daljica zvezno preide iz levega trikotnika na desnega. V sredi imata trikotnika prazen presek, na desni pa se trikotnika prekrivata in pojavi se vprašanje, kako naj daljica iz modre stranice levega trikotnika preskoči na modro stranico desnega, kjer bi potem nadaljevala svoje vrtenje.
 
 \begin{figure}[h!]
     \centering
@@ -112,29 +117,33 @@ Takoj opazimo, da se s translacijo trikotnikov prekine zvezen prehod enotske dal
 
 \section*{Preskakovanje daljice med sosednjima trikotnikoma}
 
-Pál je za preskakovanje daljice med dvema sosednjima trikotnika, ki se ne stikata več na skupni stranici (sredinski in desni primer na sliki~\ref{preskok1}), podal nadvse enostavno rešitev (gl. sliko~\ref{pal}):
+Pál je za preskakovanje daljice med dvema sosednjima trikotnika, ki se ne stikata več na skupni stranici (sredinski in desni primer na sliki~\ref{preskok1}), podal nadvse enostavno rešitev v naslednjih dveh korakih (gl. sliko~\ref{pal}):
 
 \begin{enumerate}
     \item \textbf{Konstrukcija Pálovega spoja} (označen z zeleno): Nad prekrivajočima sosednjima trikotnikoma narišemo nosilki obeh modrih stranic, ki sta seveda vzporedni. Nato zarišemo daljico, ki ju povezuje, kot je narisano na sliki.
-    \item \textbf{Gibanje po črki ``N''}: Ko se enotska daljica obrne v vrhu prvega trikotnika in pristane na modri stranici, jo pošljemo po prvi nosilki do začetka povezovalne daljice, kjer jo zavrtimo okoli zgornjega krajišča, da pristane na povezovalni daljici, nato jo premaknemo po tej daljici do vrha drugega trikotnika, jo zavrtimo v nasprotno smer in potisnemo po drugi nosilki v drugi trikotnik.
+    \item \textbf{Gibanje po črki ``N''}: Ko se enotska daljica obrne v vrhu prvega trikotnika in pristane na modri stranici, jo pošljemo po prvi nosilki do začetka povezovalne daljice, kjer jo zavrtimo okoli zgornjega krajišča, da pristane na povezovalni daljici, nato jo premaknemo po tej daljici do vrha drugega trikotnika, jo zavrtimo v nasprotno smer, da pristane na drugi nosili, po kateri jo nato potisnemo v drugi trikotnik.
 \end{enumerate}
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{ipe_slike/pal.pdf}
-    \caption{Preskok daljice med dvema prekrivajočima se sosednjima trikotnika preko lika s poljubno majhno ploščino po Pálovi zamisli}
+    \caption{Preskok daljice preko Pálovega spoja}
     \label{pal}
 \end{figure}
 
-Smer enotske daljice se na ta način ohrani, daljica pa med tem preskokom (gibanjem po zelenem liku) opiše poljubno majhno ploščino, saj je kot vrtenja z daljšanjem povezovalne daljice proti neskončnosti lahko poljubno majhen ter s tem tudi orisan krožni izsek, premice pa nimajo ploščine.
+Smer enotske daljice se na ta način pri preskoku v sosednji trikotnik ohrani, daljica pa med tem prehodom (gibanjem po zelenem liku) opiše poljubno majhno ploščino, saj je kot vrtenja, če za zgornje krajišče povezovalne daljice izberemo poljubno oddaljeno točko na prvi nosilki, lahko poljubno majhen ter s tem tudi ploščina orisanega krožnega izseka, daljice pa k skupni ploščini tako ali tako ne prispevajo ničesar.
 
-Torej za vsak preskok enotske daljice med trikotnikoma potrebujemo (in znamo konstruirati) dodatno ploščino, vendar je le-ta lahko poljubno majhna.
+Torej za vsak preskok enotske daljice med sosednjima trikotnikoma \emph{potrebujemo} (in znamo konstruirati) \emph{dodatno ploščino}, vendar je le-ta lahko \emph{poljubno majhna}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Perronova drevesa}
 
-S Pálovimi spoji smo rešili težavo vzporednih translacij enotske daljice, pri čemer se je skupna ploščina lika povečala le za poljubno majhno vrednost. Ostane nam še odkritje načina prekritja trikotnikov, da bo ploščina celotnega območja prekritja prav tako poljubno majhna, ko gre število trikotnikov proti neskončnosti.
+S Pálovimi spoji smo rešili težavo vzporednih translacij enotske daljice, pri čemer se je skupna ploščina lika povečala le za poljubno majhno vrednost.
+
+Ostane nam še odkritje načina prekritja trikotnikov, da bo ploščina celotnega območja prekritja poljubno majhna, ko gre število trikotnikov proti neskončnosti. Tako bo skupaj s Pálovimi spoji ploščina območja, v katerem se enotska daljica obrne za 180°, poljubno majhna in s tem vprašanje Kakeye odgovorjeno.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
