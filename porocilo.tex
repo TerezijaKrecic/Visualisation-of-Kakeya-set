@@ -50,11 +50,11 @@
 
 V tej projektni nalogi je bil cilj vizualizirati Kakeya-množico s pomočjo programa \href{https://ipe.otfried.org/}{Ipe}. Najprej sem morala sploh predelati problem, ki ga je zastavil Kakeya več kot sto let nazaj, poleg tega pa se še spoznati z novo programsko opremo.
 
-V poročilu bom na kratko predstavila glavno vprašanje in eno strategijo, kako ga rešiti. Vse slike, ki so vključene zraven, sem ustvarila sama s pomočjo Geogebre in omenjenega orodja Ipe. 
+Poročilo sem zapisala kar v obliki članka in vizualizacijo vključila kot spremne slike ob besedilu. Vse slike sem ustvarila sama s pomočjo omenjenega orodja Ipe (le slika~\ref{primeri} je narejena v Geogebri, saj deltoide v Ipe nisem znala vizualizirati).
 
-Poročilo je izhaja iz Besicovitchevega članka~\cite{Besicovitch}, vendar sem nekaj delov poenostavila in predelala, saj sem se poskusila čimbolj izogniti upeljevanju novih oznak. Tako npr. pri poljubno majhni ploščini Pálovega spoja nisem strogo matematično zapisala, kakšen poljubno majhen kot moramo vzeti, in iz kota izpeljala formulo za ploščino spoja, temveč sem idejo zapisala le z besedami.
+Poročilo je izhaja iz Besicovitchevega članka~\cite{Besicovitch}, vendar sem nekaj delov poenostavila in predelala, saj sem se poskusila čimbolj izogniti upeljevanju novih oznak, ki bi bralca zmedle. Tudi pri poljubno majhni ploščini Pálovega spoja nisem uvedla poljubno majhnega kota $ \epsilon $ in z njim zapisala formulo za ploščino spoja (ki je ravno tako poljubno majhen v odvisnosti od $ \epsilon $), temveč sem idejo zapisala le z besedami.
 
-V poročilu bo najprej predstavljeno zastavljeno vprašanje, ki ga rešujemo, nato pa še en način generiranja take množice, ki ustreza pogoju iz vprašanja in nanj tudi odgovori.
+V članku bo najprej predstavljeno zastavljeno vprašanje, ki ga rešujemo, nato pa še en način generiranja take množice, ki ustreza pogoju iz vprašanja in nanj tudi odgovori. Menim, da je članek dovolj poenostavljen (hkrati pa še vedno strokoven), da bi ga razumel tudi marsikateri srednješolec.
 
 \newpage
 
@@ -139,17 +139,13 @@ Smer enotske daljice se na ta način pri preskoku v sosednji podtrikotnik ohrani
 
 \section*{Perronovo drevo}
 
-S Pálovimi spoji smo rešili težavo vzporednih translacij enotske daljice, pri čemer se je skupna ploščina lika povečala le za poljubno majhno vrednost.
-
-Ostane nam še vprašanje, kako medsebojno prekriti podtrikotnike, da bo ploščina celotnega območja prekritja poljubno majhna, ko gre število podtrikotnikov proti neskončnosti. Tako bo skupaj s Pálovimi spoji ploščina območja, v katerem se enotska daljica obrne za 180°, poljubno majhna in s tem vprašanje Kakeye odgovorjeno.
+S Pálovimi spoji smo rešili težavo vzporednih translacij enotske daljice, pri čemer se je skupna ploščina lika povečala le za poljubno majhno vrednost. Zanima nas še, kako medsebojno prekriti podtrikotnike, da bo tudi ploščina celotnega območja prekritja poljubno majhna; s tem bo vprašanje Kakeye odgovorjeno. Tu nam pride v pomoč preprosta, a zanimiva konstrukcija, ki si jo je zamislil Perron, zato je po njem poimenovana \textbf{Perronovo drevo}.
 
 \begin{wrapfigure}{r}{0.23\textwidth}
     \includegraphics[width=0.9\linewidth]{ipe_slike/polovica_trikotnika.pdf}
 \end{wrapfigure}
 
-Perron je odkril zanimiv, a preprost in učinkovit način prekrivanja podtrikotnikov.
-
-Spomnimo se, kako smo iz pravokotnega enakokratkega trikotnika dobili $ 2n $ manjših trikotnikov (slika~\ref{trikotnik_razdelitev}). Vzemimo spodnji osnovni trikotnik, ki je na desni označen z neprekinjeno črto, in na njem poglejmo konstrukcijo. Za drugi osnovni trikotnik, ki je pravokoten na prvega, bo postopek enak, le vse je obrnjeno za pravi kot v levo.
+Spomnimo se, kako smo iz pravokotnega enakokrakega trikotnika dobili $ 2n $ manjših trikotnikov (slika~\ref{trikotnik_razdelitev}). Vzemimo spodnji osnovni trikotnik, ki je na desni označen z neprekinjeno črto, in na njem poglejmo konstrukcijo. Za drugi osnovni trikotnik, ki je pravokoten na prvega, bo postopek enak.
 
 \begin{wrapfigure}{l}{0.45\textwidth}
     \includegraphics[width=0.9\linewidth]{ipe_slike/k_5.pdf}
@@ -157,17 +153,17 @@ Spomnimo se, kako smo iz pravokotnega enakokratkega trikotnika dobili $ 2n $ man
     \label{sistem5}
 \end{wrapfigure}
 
-Pri konstrukciji bomo povečevali število podtrikotnikov, na katere je razdeljen osnovni trikotnik. Naj bo $ k \in \mathbb{N}, k \neq 1 $ (na slikah je $ k = 5 $) in naš koordinatni sistem tak, kot ga kaže slika~\ref{sistem5}: V vertikalni smeri smo dolžino 1 razdelili na $ k $ skladnih delov in dobili $ k $ ``nivojev''. Na sredo spodnje horizontalne črte položimo osnovnemu trikotniku podoben trikotnik z višino $ \frac{2}{k} $.
+Pri konstrukciji bomo povečevali število podtrikotnikov, na katere je razdeljen osnovni trikotnik. Naj bo $ k \in \mathbb{N}, k \geq 2 $, in naš koordinatni sistem tak, kot ga kaže slika~\ref{sistem5}: V vertikalni smeri je razdalja 1 razdeljena na $ k $ skladnih delov -- ``nivojev''. Na spodnjo horizontalno črto položimo osnovnemu trikotniku podoben trikotnik z višino $ \frac{2}{k} $.
 
-Definirajmo še \emph{vrh} -- to je vsak trikotnik z višino $ \frac{1}{k} $, ki v koordinatnem sistemu leži najvišje (na sliki ~\ref{sistem5} pobarvano modro).
+Definirajmo še \emph{vrh} -- to je vsak trikotnik z višino $ \frac{1}{k} $, ki v koordinatnem sistemu leži najvišje (na sliki ~\ref{sistem5} pobarvan modro).
 
-Z naslednjim postopkom bomo zgenerirali osnovni trikotnik z višino 1, ki je razdeljen na medsebojno že premaknjenih $ 2^{k-2} $ podtrikotnikov: \emph{Nehorizontalne stranice vsakega vrha podaljšamo za en nivo navzgor. Zgornje krajišče vsake podaljšane daljice povežemo s spodnjim ogliščem vrha, ki leži na isti strani (torej se spustimo za dva nivoja navzdol). Tako originalen trikotnik dobi dva ``uhlja''.}
+Z naslednjim postopkom zgeneriramo osnovni trikotnik z višino 1, ki je razdeljen na medsebojno že premaknjenih $ n = 2^{k-2} $ podtrikotnikov: \emph{Nehorizontalni stranici vsakega vrha podaljšamo za en nivo navzgor in dobljeni zgornji krajišči povežemo s spodnjima ogliščema vrha, kot kaže slika~\ref{koraki} (torej se spustimo za dva nivoja navzdol). Tako vrh dobi dva ``uhlja''.}
 
-Postopek ponovimo za vsak nov vrh, dokler ne pridemo do nivoja 1, torej skupaj opravimo $ k-2 $ korakov. Postopek po avtorju imenujemo \textbf{brstenje Perronovega drevesa}.
+Postopek ponovimo za vsak nov vrh, dokler ne pridemo do nivoja 1, torej ko opravimo $ k-2 $ korakov. Celoten proces imenujemo \textbf{brstenje Perronovega drevesa}.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{ipe_slike/koraki.pdf}
+    \includegraphics[width=0.9\textwidth]{ipe_slike/koraki.pdf}
     \caption{Generiranje osnovnega trikotnika in podtrikotnikov za $ k = 5 $}
     \label{koraki}
 \end{figure}
@@ -177,7 +173,7 @@ Postopek ponovimo za vsak nov vrh, dokler ne pridemo do nivoja 1, torej skupaj o
 \begin{enumerate}
     \item Vsak vrh porodi skadna uhlja, ki imata enako ploščino kot taisti vrh.
     \item V $ l $-tem koraku ($ l = 1, 2, \ldots, k-2 $) dobimo $ 2^l $ prekrivajočih se podtrikotnikov, ki skupaj sestavijo osnovnemu trikotniku podoben trikotnik z višino $ \frac{l+2}{k} $.
-    \item V vsakem koraku se nam skupna ploščina poveča za natanko dvakratno ploščino vrha, s katerim začnemo prvi korak, tj. za $ \frac{2}{k^2} $
+    \item V vsakem koraku se nam skupna ploščina poveča za natanko dvakratno ploščino vrha, s katerim začnemo prvi korak (slika~\ref{koraki}), tj. za $ \frac{2}{k^2} $.
     \item Skupna ploščina lika, ki ga dobimo na zadnjem koraku, je $ \frac{2}{k} $.
 \end{enumerate}
 
@@ -188,30 +184,44 @@ Postopek ponovimo za vsak nov vrh, dokler ne pridemo do nivoja 1, torej skupaj o
 Poglejmo si uhlja, ki nastaneta na nekem vmesnem koraku iz enega od vrhov ((a) na sliki~\ref{uhlji}):
 
 \begin{itemize}
-    \item \emph{Ploščina uhljev} (b): Vsak trikotnik, sestavljen in vrha in enega izmed uhljev (označeno z zeleno), ima dvakratno ploščino vrha, saj je osnovnica skupna, višina pa dvakrat večja od višine vrha. Torej ima vsak uhelj enako ploščino kot vrh.
+    \item \emph{Ploščina uhljev} (b): Vsak trikotnik, sestavljen iz vrha in enega izmed uhljev (označeno z zeleno), ima dvakratno ploščino vrha, saj je osnovnica skupna, višina pa dvakrat večja od višine vrha. Torej ima vsak uhelj enako ploščino kot vrh.
     \item \emph{Skladnost uhljev} (c): Zaradi podaljšanja stranic uhljev za en nivo navzgor imata uhlja dva para skladnih stranic ob sovršnem kotu, torej sta res skladna in sta njuni najdaljši stanici vzporedni.
 \end{itemize}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{ipe_slike/uhlji.pdf}
+    \includegraphics[width=0.75\textwidth]{ipe_slike/uhlji.pdf}
     \caption{Geometrijski dokaz lastnosti 1}
     \label{uhlji}
 \end{figure}
 
-Iz skladnosti sledi, sta tudi oranžni črtkani nosilki (d) vzporedni in smo dobili dva sosednja podtrikotnika, ki skupaj tvorita trikotnik, podoben prejšnjemu (e), le za $ \frac{1}{k} $ višji.
+Iz skladnosti sledi, sta tudi oranžni črtkani nosilki (d) vzporedni in smo res dobili dva sosednja podtrikotnika, ki skupaj tvorita trikotnik, podoben prejšnjemu (e), le za $ \frac{1}{k} $ višji.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection*{Lastnost 2}
 
-Ker postopek začnemo s trikotnikom, ki je podoben osnovnemu trikotniku, ki ga želimo na koncu, in ker lastnost 1 pove, da na vsakem koraku iz trikotnika dobimo dva višja podtrikotnika, ki skupaj tvorita prejšnjemu podoben trikotnik, sledi, da v $ l $-tem koraku res dobimo $ 2^l $ podtrikotnikov, ki skupaj sestavijo ustrezno pomanjšan osnovni trikotnik. Njihova višina je $ \frac{l+2}{k} $, saj prvi korak začnemo na višini $ \frac{2}{k} $ in se vsakič dvignemo za $ \frac{1}{k} $ navzgor. V zadnjem koraku res dobimo $ 2^{k-2} $ podtrikotnikov.
+Ker postopek začnemo s trikotnikom, ki je podoben osnovnemu trikotniku, in ker iz lastnosti 1 sledi, da na vsakem koraku iz enega trikotnika dobimo dva višja podtrikotnika, ki skupaj tvorita njemu podoben trikotnik, v $ l $-tem koraku res dobimo $ 2^l $ podtrikotnikov, ki skupaj sestavijo ustrezno pomanjšan osnovni trikotnik (slika~\ref{lastnost2}). Njihova višina je $ \frac{l+2}{k} $, saj prvi korak začnemo na višini $ \frac{2}{k} $ in se vsakič dvignemo za $ \frac{1}{k} $ navzgor. V zadnjem koraku tako res dobimo $ 2^{k-2} $ podtrikotnikov.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ipe_slike/lastnost2.pdf}
+    \caption{Geometrijski prikaz lastnosti 2 za $ k = 2 $}
+    \label{lastnost2}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection*{Lastnost 3}
 
-Zanima nas, za koliko se poveča skupna ploščina lika po vsakem koraku. Iz konstrukcije in podobnosti je razvidno, da v vsakem koraku novi vrhovi skupaj tvorijo ravno originalen vrh, s katerim smo začeli (slika~\ref{koraki}), vsak nov vrh pa je ploščinsko enak polovici uhlja. Torej se v vsakem koraku ploščina poveča za dvakratno  skupno ploščino novih vrhov, torej za dvakratno ploščino originalnega vrha, tj. za $ 2 \cdot \frac{2}{k} \frac{1}{k} \frac{1}{2} = \frac{2}{k^2} $.
+Iz konstrukcije in podobnosti je razvidno, da vsak vrh preko uhljev porodi dva vrhova, ki sta (če ju zlepimo skupaj) skladna taistemu vrhu (slika~\ref{vrhovi}). Zato na vsakem koraku vsi novi vrhovi skupaj tvorijo ravno originalen vrh, s katerim smo začeli. Ker ima vsak nov vrh polovično ploščino uhlja, se na vsakem koraku ploščina poveča za dvakratno skupno ploščino novih vrhov, torej za dvakratno ploščino originalnega vrha, tj. za $ 2 \cdot \frac{1}{2} \cdot \frac{2}{k} \cdot \frac{1}{k} = \frac{2}{k^2} $.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{ipe_slike/novi_vrhovi.pdf}
+    \caption{Vsak vrh porodi vrhova, ki sta mu (zlepljena skupaj) skladna}
+    \label{vrhovi}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -220,34 +230,72 @@ Zanima nas, za koliko se poveča skupna ploščina lika po vsakem koraku. Iz kon
 Skupna ploščina je tako sestavljena iz ploščine prvotnega trikotnika z višino $ \frac{2}{k} $ in iz na vsakem koraku dodanih ploščin. Opravili smo $ (k-2) $ korakov, torej je skupna ploščina Perronovega drevesa za izbrani $ k $ enaka
 
 \begin{equation*}
-    \frac{4}{k} \cdot \frac{2}{k} \cdot \frac{1}{2} + (k -2) \cdot \frac{2}{k^2} = \frac{2}{k}.
+    S = \frac{1}{2} \cdot \frac{4}{k} \cdot \frac{2}{k}  + (k -2) \cdot \frac{2}{k^2} = \frac{2}{k}.
 \end{equation*}
 
-S to konstrukcijo smo prišli do rešitve, ki jo je našel že Besicovitch, saj večji kot je $ k $, manjša je skupna ploščina lika in posledično lahko dobimo poljubno majhno ploščino.
+S to konstrukcijo smo prišli do odgovora na Kakeyino vprašanje, ki ga je podal že Besicovitch. Večji kot je $ k $, manjša je skupna ploščina lika in posledično lahko dobimo poljubno majhno ploščino. Na sliki~\ref{brstenje_n_k} lahko opazujemo, kako se Perronovo drevo s povečevanjem $ k $ oz. števila razdelitev osnovnega trikotnika na podtrikotnike vse bolj razvejuje.
 
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ipe_slike/brstenje_k_n.pdf}
+    \caption{Perronova drevesa za $ k = 5, 6, 7, 8 $}
+    \label{brstenje_n_k}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-\section*{Povzetek rezultatov}
+\section*{Povzetek rezultatov in slika konstrukcije}
 
-Osnovni trikotnik z višino 1 smo razdelili na $ n = 2^{k-2} $ podtrikotnikov in jih medseboj tako prekrili, da smo dobili Perronovo drevo. Ploščina dobljenega lika je $ \frac{2}{k} $. Za prehod enotske daljice med sosednjimi podtrikotnikom potrebujemo še $ n-1 $ Pálovih spojev, ki pa skupaj doprinesejo poljubno majhno ploščino.
+Za konstrukcijo lika, v katerem se enotska daljica zvezno obrne za 180°, uporabimo Perronovo drevo. Izberemo $ k \in \mathbb{N}, k \geq 2, $ in preko brstenja drevesa tvorimo $ n = 2^{k-2} $ podtrikotnikov z višino 1, na katere je razdeljen osnovni trikotnik z višino 1 (slika~\ref{brstenje}). Ploščina dobljenega lika je $ \frac{2}{k} $.
 
-Postopek ponovimo še na drugem osnovnem trikotniku, ki je pravokoten na prvega. Lika združimo, kot kaže slika~\ref{zdruzitev}, in dobimo skupno ploščino največ $ \frac{4}{k} $ plus poljubno majhno vrednost, ki pride iz $ 2n - 1 $ Pálovih spojev (dodali smo še spoj za prehod enotske daljice iz prvega osnovnega trikotnika v drugega). Ko povečujemo $ k $ (in s tem tudi $ n $), gre skupna ploščina proti 0.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ipe_slike/perronova_drevesa.pdf}
+    \caption{Brstenje Perronovega drevesa za $ k = 5 $}
+    \label{brstenje}
+\end{figure}
+
+Za prehod enotske daljice med sosednjimi podtrikotniki potrebujemo še $ n-1 $ Pálovih spojev, ki pa skupaj doprinesejo poljubno majhno ploščino. Na sliki~\ref{prehodi} je prikazano, kako se enotska daljica zvezno zavrti za 90° znotraj enega osnovnega trikotnika (z rdečo je označen njen začetni, z modro pa končni položaj). S prekinjeno črto so označeni Pálovi spoji, ki jih je res sedem. Premikanje torej poteka za vsak podtrikotnik enako -- najprej se daljica zasuče okoli zgornjega oglišča, da pade na drugo stranico, nato pa preko spoja preide v naslednji podtrikotnik.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{ipe_slike/prehod_drevo1.pdf}
+    \caption{Rotacija enotske daljice za 90° pri $ n = 8 $}
+    \label{prehodi}
+\end{figure}
+
+Postopek ponovimo še na drugem osnovnem trikotniku, ki je pravokoten na prvega. Lika preko Pálovega spoja združimo, na primer kot kaže slika~\ref{zdruzitev}. Ko se daljica zavrti za 180°, jo samo potisnemo po isti stranici na začetno pozicijo. Končni lik ima ploščino $ \frac{4}{k} + \epsilon $, kjer je $ \epsilon $ skupna, a poljubno majhna ploščina, ki jo prispeva $ 2n - 1 $ Pálovih spojev. Ko povečujemo $ k $, gre skupna ploščina proti 0 (vendar nikoli ne dosežemo ničelne ploščine!).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{ipe_slike/prehod_skupaj.pdf}
+    \caption{Rotacija enotske daljice za 180° pri $ n = 8 $}
+    \label{zdruzitev}
+\end{figure}
 
 Zaključimo z odgovorom na vprašanje Kakeye -- \textbf{ploščina območja, znotraj katerega se enotska daljica zvezno obrne za 180°, je lahko poljubno majhna}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Zaključek}
 
-Lahko bi vzeli tudi enakostraničen trikotnik (vrh s 60°) in postopek izvedli 3x namesto 2x. Kakršenkoli trikotnik bi bil vredu, najbolj tak, kjer kot v vrhu deli 180°.
+Predstavljen je bil en način generiranja množice, ki ustreza pogovju iz vprašanja. Možnih konstrukcij je še več, vendar se v nadaljnje raziskovanje nisem spuščala. Omenim le še variacijo, kjer namesto pravokotnega enakokrakega trikotnika za osnovni trikotnik vzamemo enakostraničnega. V tem primeru je postopek brstenja dreves enak, le na koncu moramo namesto dveh skupaj ``zlepiti'' tri Perronova drevesa skupaj s spoji (slika~\ref{60_90}).
 
-Besicovitch set -- množica, ki vsebuje enotsko daljico v vsaki smeri (ni pa nujno, da se lahko zvezno obrne)
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{ipe_slike/koncni_lik_90_napol_spoji.pdf}
+    \includegraphics[width=0.45\textwidth]{ipe_slike/koncni_lik_60_napol_spoji.pdf}
+    \caption{Primerjava spojenih Perronovih dreves pri dveh različnih osnovnih trikotnikih. Zaradi preglednosti so zelene povezave v spojih izpuščene}
+    \label{60_90}
+\end{figure}
+
+Za nalogo sem imela vizualizacijo Kakeya-množice, ampak na začetku nisem vedela, kaj mora biti moj končni izdelek, zato sem se odločila za zapis članka s teoretično razlago ob večjem številu vizualnega gradiva za lažje razumevanje.
+
+Osebno mi je tema naloge všeč, saj je bila zanimiva in hkrati ne pretežka, da je dijaki ne bi mogli razumeti. Ko sem poiskala malo več literature in posnetkov z razlago, sem lahko osnovni članek precej poenostavila in zapisala bolj razumljivo. Kar se tiče programa Ipe, sem nad njim zadovoljna, ker se marsikatero konstrukcijo z njim da hitreje narisati kot v Geogebri. Vendar ni njeno nadomestilo, saj ne zmore vizualizacije krivulj.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-% \nocite{*}      % navede tudi vire, ki jih ne citiras
+\nocite{*}      % navede tudi vire, ki jih ne citiras
 \printbibliography[heading=bibintoc, title={Literatura}]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
