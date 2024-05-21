@@ -54,7 +54,7 @@ Poročilo sem zapisala kar v obliki članka in vizualizacijo vključila kot spre
 
 Poročilo je izhaja iz Besicovitchevega članka~\cite{Besicovitch}, vendar sem nekaj delov poenostavila in predelala, saj sem se poskusila čimbolj izogniti upeljevanju novih oznak, ki bi bralca zmedle. Tudi pri poljubno majhni ploščini Pálovega spoja nisem uvedla poljubno majhnega kota $ \epsilon $ in z njim zapisala formulo za ploščino spoja (ki je ravno tako poljubno majhen v odvisnosti od $ \epsilon $), temveč sem idejo zapisala le z besedami.
 
-V članku bo najprej predstavljeno zastavljeno vprašanje, ki ga rešujemo, nato pa še en način generiranja take množice, ki ustreza pogoju iz vprašanja in nanj tudi odgovori. Menim, da je članek dovolj poenostavljen (hkrati pa še vedno strokoven), da bi ga razumel tudi marsikateri srednješolec.
+V članku bo najprej predstavljeno zastavljeno vprašanje, ki ga rešujemo, nato pa še en način generiranja take množice, ki ustreza pogoju iz vprašanja in nanj tudi odgovori. Menim, da je članek dovolj poenostavljen, hkrati pa še vedno strokoven, da bi ga razumel tudi marsikateri srednješolec.
 
 \newpage
 
@@ -62,13 +62,7 @@ V članku bo najprej predstavljeno zastavljeno vprašanje, ki ga rešujemo, nato
 
 \section*{Kakeyev problem igle}
 
-Japonski matematik Sōichi Kakeya je leta 1917 zastavil naslednje vprašanje, ki se ga je v kasnejšem času prijelo ime ``\emph{Kakeyev problem igle}''\footnote{orig. \emph{the Kakeya needle problem}, op. prev.}:
-
-\vspace{0.2cm}
-\begin{center}
-    \textbf{Kolikšna je lahko najmanjša ploščina območja, znotraj katerega se daljica dolžine 1 zvezno obrne za 180°?}
-\end{center}
-\vspace{0.2cm}
+Japonski matematik Sōichi Kakeya je leta 1917 zastavil naslednje vprašanje, ki se ga je v kasnejšem času prijelo ime ``\emph{Kakeyev problem igle}''\footnote{orig. \emph{the Kakeya needle problem}, op. prev.}: \textbf{Kolikšna je lahko najmanjša ploščina območja, znotraj katerega se daljica dolžine 1 zvezno obrne za 360°?}
 
 \noindent Poglejmo si tri primere geometrijskih likov, ki ustrezajo pogoju iz vprašanja:
 
@@ -85,13 +79,13 @@ Japonski matematik Sōichi Kakeya je leta 1917 zastavil naslednje vprašanje, ki
     \label{primeri}
 \end{figure}
 
-Nekaj časa so verjeli, da je deltoida odgovor na vprašanje Kakeye, vendar je ruski matematik Abram Besicovitch uspel dokazati, da \textbf{spodnja meja za iskano ploščino \emph{ne} obstaja}. K enostavni konstrukciji primera takega lika je pripomogel nemški matematik Oskar Perron, svoj del pa je prispeval tudi madžarsko-danski matematik Gyula Pál.
+Nekaj časa so verjeli, da je deltoida odgovor na vprašanje Kakeye, vendar je ruski matematik Abram Besicovitch uspel dokazati, da \textbf{spodnja meja za iskano ploščino \emph{ne} obstaja}. K enostavni konstrukciji primera takega lika je pripomogel nemški matematik Oskar Perron, pomemben del pa je prispeval tudi madžarsko-danski matematik Gyula Pál.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Ideja za konstrukcijo}
 
-Vzemimo enakokraki pravokotni trikotnik s katetama dolžine 2. Če v središče hipotenuze postavimo en konec enotske daljice, njen drugi konec opiše kot 180°, pri čemer daljica ves čas ostane znotraj lika. Trikotnik sicer ustreza pogoju iz vprašanja, vendar je njegova ploščina enaka 2 in večja od vseh treh zgornjih primerov.
+Vzemimo enakokraki pravokotni trikotnik s katetama dolžine 2. Če v središče hipotenuze postavimo en konec enotske daljice, njen drugi konec opiše kot 180°, pri čemer daljica ves čas ostane znotraj lika. Nato jo po hipotenuzi potisnemo do začetne pozicije in še enkrat zavrtimo -- tako se daljica res zavrti za 360°. Trikotnik sicer ustreza pogoju iz vprašanja, vendar je njegova ploščina enaka 2 in večja od vseh treh zgornjih primerov.
 
 Sedaj ga razdelimo na pol, kot kaže slika~\ref{trikotnik_razdelitev}, ter vsakega izmed delov (ki sta še vedno enakokraka pravokotna trikotnika, imenujmo ju ``\emph{osnovna trikotnika}'') še dodatno razdelimo na $ n $ manjših trikotnikov (imenujmo jih ``\emph{podtrikotniki}'') z osnovnico dolžine $ \frac{2}{n} $ in višino 1. Enotska daljica se tako obrne za 180°, ko se v enem krajišču zasuče čez vrh vsakega izmed podtrikotnikov in prehaja med njimi preko skupnih stranic.
 
@@ -120,7 +114,7 @@ Takoj opazimo, da se s translacijo podtrikotnikov prekine zvezen prehod enotske 
 Pál je za preskakovanje daljice med dvema sosednjima podtrikotnikoma, ki se ne stikata več na skupni stranici (sredinski in desni primer na sliki~\ref{preskok1}), podal nadvse enostavno rešitev v naslednjih dveh korakih (gl. sliko~\ref{pal}):
 
 \begin{enumerate}
-    \item \textbf{Konstrukcija Pálovega spoja} (označen z zeleno): Nad prekrivajočima sosednjima podtrikotnikoma narišemo nosilki obeh modrih stranic, ki sta seveda vzporedni. Nato zarišemo daljico, ki ju povezuje, kot je narisano na sliki.
+    \item \textbf{Konstrukcija Pálovega spoja} (zeleno območje): Nad prekrivajočima sosednjima podtrikotnikoma narišemo nosilki obeh modrih stranic, ki sta seveda vzporedni. Nato zarišemo daljico, ki ju povezuje, kot je narisano na sliki.
     \item \textbf{Gibanje po črki ``N''}: Ko se enotska daljica obrne v vrhu prvega podtrikotnika in pristane na modri stranici, jo pošljemo po prvi nosilki do začetka povezovalne daljice, kjer jo zavrtimo okoli zgornjega krajišča, da pristane na povezovalni daljici, nato jo premaknemo po tej daljici do vrha drugega podtrikotnika, jo zavrtimo v nasprotno smer, da pristane na drugi nosilki, po kateri jo nato potisnemo v drugi podtrikotnik.
 \end{enumerate}
 
@@ -153,7 +147,7 @@ Spomnimo se, kako smo iz pravokotnega enakokrakega trikotnika dobili $ 2n $ manj
     \label{sistem5}
 \end{wrapfigure}
 
-Pri konstrukciji bomo povečevali število podtrikotnikov, na katere je razdeljen osnovni trikotnik. Naj bo $ k \in \mathbb{N}, k \geq 2 $, in naš koordinatni sistem tak, kot ga kaže slika~\ref{sistem5}: V vertikalni smeri je razdalja 1 razdeljena na $ k $ skladnih delov -- ``nivojev''. Na spodnjo horizontalno črto položimo osnovnemu trikotniku podoben trikotnik z višino $ \frac{2}{k} $.
+Pri konstrukciji bomo povečevali število podtrikotnikov, na katere je razdeljen osnovni trikotnik. Naj bo $ k \in \mathbb{N}, k \geq 2 $, in naš koordinatni sistem tak, kot ga kaže slika~\ref{sistem5}: v vertikalni smeri je razdalja 1 razdeljena na $ k $ skladnih delov -- ``nivojev''. Na spodnjo horizontalno črto položimo osnovnemu trikotniku podoben trikotnik z višino $ \frac{2}{k} $.
 
 Definirajmo še \emph{vrh} -- to je vsak trikotnik z višino $ \frac{1}{k} $, ki v koordinatnem sistemu leži najvišje (na sliki ~\ref{sistem5} pobarvan modro).
 
@@ -214,7 +208,7 @@ Ker postopek začnemo s trikotnikom, ki je podoben osnovnemu trikotniku, in ker 
 
 \subsubsection*{Lastnost 3}
 
-Iz konstrukcije in podobnosti je razvidno, da vsak vrh preko uhljev porodi dva vrhova, ki sta (če ju zlepimo skupaj) skladna taistemu vrhu (slika~\ref{vrhovi}). Zato na vsakem koraku vsi novi vrhovi skupaj tvorijo ravno originalen vrh, s katerim smo začeli. Ker ima vsak nov vrh polovično ploščino uhlja, se na vsakem koraku ploščina poveča za dvakratno skupno ploščino novih vrhov, torej za dvakratno ploščino originalnega vrha, tj. za $ 2 \cdot \frac{1}{2} \cdot \frac{2}{k} \cdot \frac{1}{k} = \frac{2}{k^2} $.
+Iz konstrukcije in podobnosti je razvidno, da vsak vrh preko uhljev porodi dva vrhova, ki sta (če ju zlepimo skupaj) skladna taistemu vrhu (slika~\ref{vrhovi}). Zato na vsakem koraku vsi novi vrhovi skupaj tvorijo ravno originalen vrh, s katerim smo začeli. Ker ima vsak nov vrh polovično ploščino uhlja, se na vsakem koraku ploščina poveča za dvakratno skupno ploščino novih vrhov, torej za dvakratno ploščino originalnega vrha, tj. za $ 2 \left( \frac{1}{2} \cdot \frac{2}{k} \cdot \frac{1}{k} \right) = \frac{2}{k^2} $.
 
 \begin{figure}[h!]
     \centering
@@ -227,13 +221,13 @@ Iz konstrukcije in podobnosti je razvidno, da vsak vrh preko uhljev porodi dva v
 
 \subsubsection*{Lastnost 4}
 
-Skupna ploščina je tako sestavljena iz ploščine prvotnega trikotnika z višino $ \frac{2}{k} $ in iz na vsakem koraku dodanih ploščin. Opravili smo $ (k-2) $ korakov, torej je skupna ploščina Perronovega drevesa za izbrani $ k $ enaka
+Skupna ploščina je tako sestavljena iz ploščine prvotnega trikotnika z višino $ \frac{2}{k} $ in iz na vsakem koraku dodanih enakih ploščin. Opravili smo $ (k-2) $ korakov, torej je skupna ploščina Perronovega drevesa za izbrani $ k $ enaka
 
 \begin{equation*}
     S = \frac{1}{2} \cdot \frac{4}{k} \cdot \frac{2}{k}  + (k -2) \cdot \frac{2}{k^2} = \frac{2}{k}.
 \end{equation*}
 
-S to konstrukcijo smo prišli do odgovora na Kakeyino vprašanje, ki ga je podal že Besicovitch. Večji kot je $ k $, manjša je skupna ploščina lika in posledično lahko dobimo poljubno majhno ploščino. Na sliki~\ref{brstenje_n_k} lahko opazujemo, kako se Perronovo drevo s povečevanjem $ k $ oz. števila razdelitev osnovnega trikotnika na podtrikotnike vse bolj razvejuje.
+S to konstrukcijo smo prišli do odgovora na Kakeyino vprašanje, ki ga je podal že Besicovitch. Večji kot je $ k $, manjša je skupna ploščina lika in posledično lahko dobimo poljubno majhno ploščino. Na sliki~\ref{brstenje_n_k} lahko opazujemo, kako se Perronovo drevo s povečevanjem $ k $ oz. števila razdelitev osnovnega trikotnika na podtrikotnike vse bolj razvejuje, ploščina pa manjša.
 
 \begin{figure}[h!]
     \centering
@@ -265,7 +259,7 @@ Za prehod enotske daljice med sosednjimi podtrikotniki potrebujemo še $ n-1 $ P
     \label{prehodi}
 \end{figure}
 
-Postopek ponovimo še na drugem osnovnem trikotniku, ki je pravokoten na prvega. Lika preko Pálovega spoja združimo, na primer kot kaže slika~\ref{zdruzitev}. Ko se daljica zavrti za 180°, jo samo potisnemo po isti stranici na začetno pozicijo. Končni lik ima ploščino $ \frac{4}{k} + \epsilon $, kjer je $ \epsilon $ skupna, a poljubno majhna ploščina, ki jo prispeva $ 2n - 1 $ Pálovih spojev. Ko povečujemo $ k $, gre skupna ploščina proti 0 (vendar nikoli ne dosežemo ničelne ploščine!).
+Postopek ponovimo še na drugem osnovnem trikotniku, ki je pravokoten na prvega. Lika preko Pálovega spoja združimo, na primer kot kaže slika~\ref{zdruzitev}. Ko se daljica zavrti za 180°, jo samo potisnemo po isti stranici na začetno pozicijo in postopek ponovimo, da dobimo obrat enotske daljice za 360°. Končni lik ima ploščino največ $ \frac{4}{k} + \epsilon $, kjer je $ \epsilon $ skupna, a poljubno majhna ploščina, ki jo prispeva $ 2n - 1 $ Pálovih spojev. Ko povečujemo $ k $, gre skupna ploščina proti nič (vendar nikoli ne dosežemo ničelne ploščine!).
 
 \begin{figure}[h!]
     \centering
@@ -274,7 +268,7 @@ Postopek ponovimo še na drugem osnovnem trikotniku, ki je pravokoten na prvega.
     \label{zdruzitev}
 \end{figure}
 
-Zaključimo z odgovorom na vprašanje Kakeye -- \textbf{ploščina območja, znotraj katerega se enotska daljica zvezno obrne za 180°, je lahko poljubno majhna}.
+Zaključimo z odgovorom na vprašanje Kakeye -- \textbf{ploščina območja, znotraj katerega se enotska daljica zvezno obrne za 360°, je lahko poljubno majhna}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Zaključek}
@@ -285,13 +279,13 @@ Predstavljen je bil en način generiranja množice, ki ustreza pogovju iz vpraš
     \centering
     \includegraphics[width=0.45\textwidth]{ipe_slike/koncni_lik_90_napol_spoji.pdf}
     \includegraphics[width=0.45\textwidth]{ipe_slike/koncni_lik_60_napol_spoji.pdf}
-    \caption{Primerjava spojenih Perronovih dreves pri dveh različnih osnovnih trikotnikih. Zaradi preglednosti so zelene povezave v spojih izpuščene}
+    \caption{Primer spojenih Perronovih dreves pri dveh različnih osnovnih trikotnikih. Zaradi preglednosti so zelene povezave v spojih izpuščene}
     \label{60_90}
 \end{figure}
 
 Za nalogo sem imela vizualizacijo Kakeya-množice, ampak na začetku nisem vedela, kaj mora biti moj končni izdelek, zato sem se odločila za zapis članka s teoretično razlago ob večjem številu vizualnega gradiva za lažje razumevanje.
 
-Osebno mi je tema naloge všeč, saj je bila zanimiva in hkrati ne pretežka, da je dijaki ne bi mogli razumeti. Ko sem poiskala malo več literature in posnetkov z razlago, sem lahko osnovni članek precej poenostavila in zapisala bolj razumljivo. Kar se tiče programa Ipe, sem nad njim zadovoljna, ker se marsikatero konstrukcijo z njim da hitreje narisati kot v Geogebri. Vendar ni njeno nadomestilo, saj ne zmore vizualizacije krivulj.
+Osebno mi je tema naloge všeč, saj je bila zanimiva in hkrati ne pretežka, da je kakšni uspešnejši dijaki ne bi mogli razumeti. Ko sem poiskala malo več literature in posnetkov z animacijo (npr. \cite{YTNumberphile} in njegova preprostejša razlaga \cite{YTrazlaga}), sem lahko osnovni članek precej poenostavila in zapisala bolj razumljivo. Kar se tiče programa Ipe, sem nad njim zadovoljna, ker se marsikatero konstrukcijo z njim da hitreje narisati kot v Geogebri. Vendar ni njeno nadomestilo, saj ne zmore vizualizacije krivulj.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
