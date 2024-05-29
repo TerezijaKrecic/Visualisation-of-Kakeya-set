@@ -8,6 +8,9 @@
 *.bcf
 *.blg
 *.run.xml
+*.nav
+*.snm
+*.toc
 
 
 
